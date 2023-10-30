@@ -1,0 +1,26 @@
+.program spi_on_pio
+.side_set 3
+
+.wrap_target
+    pull                side 7  ;clkh cs1h cs2h
+    set x, 23           side 7  ;clkh cs1L cs2h
+bitloop0:
+    out pins, 1         side 5  ;clkh cs1L cs2h
+    jmp x--, bitloop0   side 4  ;clkl cs1L cs2h
+
+    pull                side 7 ; clkh cs1L cs2h
+    set x, 23           side 7 ; clkh cs1h cs2L
+bitloop1:
+    out pins, 1         side 2 ; clkh cs1h cs2L
+    jmp x--, bitloop1   side 2 ; clkh cs1h cs2L
+
+.wrap
+
+    ;pull                side 6   
+
+;    pull                side 6
+;    set x, 23           side 6
+;bitloop1:
+    ;out pins, 1         side 2
+    ;jmp x--, bitloop1   side 3 
+

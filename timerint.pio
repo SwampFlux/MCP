@@ -1,0 +1,6 @@
+.program timerint
+
+
+.wrap_target
+    irq 0
+.wrap
