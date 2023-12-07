@@ -1,4 +1,4 @@
-#include "NextTuesday_RP2040_Board.h"
+#include "MCP_RP2040_Board.h"
 
 #include "pico/time.h"
 #include "hardware/adc.h"
@@ -10,7 +10,7 @@
 #include "hardware/pio.h"
 #include "pico/stdlib.h"
 #include "spi.pio.h"
-#include "DAC80501.h"
+// #include "DAC80501.h"
 
 enum
 {

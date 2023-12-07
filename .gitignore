@@ -1,0 +1,6 @@
+build
+
+GoldfishOscTest/Debug
+GoldfishOscTest/fishblep_float.raw
+.vscode/.cortex-debug.registers.state.json
+.vscode/.cortex-debug.peripherals.state.json

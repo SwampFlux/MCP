@@ -1,7 +1,7 @@
 
 # What CMake to start at
 cmake_minimum_required(VERSION 3.12)
-set(PICO_SDK_PATH "C:/Program Files/Raspberry Pi/Pico SDK v1.5.0/pico-sdk")
+set(PICO_SDK_PATH "/Users/wray/Repos/rpi/pico-sdk")
 # Include the subsidiary .cmake file to get the SDK
 include(pico_sdk_import.cmake)
 
@@ -13,7 +13,11 @@ set(PICO_BOARD_HEADER_DIRS ${CMAKE_CURRENT_LIST_DIR})
 project(MCP VERSION 1.0.0)
  
 # Link the Project to a source file (step 4.6)
-add_executable(MCP MCP_RP2040_Board.cpp MCP_RP2040_Main.cpp MCP_TimerInt.cpp)
+add_executable(MCP
+MCP_DACstuff.cpp
+MCP_RP2040_Board.cpp
+MCP_RP2040_Main.cpp
+MCP_TimerInt.cpp)
 #oops - this may have to be upgraded to a faster driver
 set(PICO_BOARD "board_MCP")
 # Link the Project to an extra library (pico_stdlib)

@@ -1,0 +1,13 @@
+{
+  "files.associations": {
+    "cstddef": "c",
+    "shifter.pio.h": "c",
+    "shifter1.pio.h": "c",
+    "adc.h": "c"
+  },
+  "cortex-debug.variableUseNaturalFormat": false,
+  "cmake.environment": {
+    "PICO_SDK_PATH": "../../../rpi/pico-sdk"
+  },
+  "cmake.generator": "Unix Makefiles"
+}
